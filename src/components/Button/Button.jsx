@@ -2,12 +2,11 @@ import React from 'react'
 
 function Button() {
   return (
-    <div className='w-[120px]
+    <button type="submit" className='w-[120px]
     h-[40px]
     rounded-[10px]
     bg-[#1876f2]
     text-[#fff] 
-    text-[10px]
     font-bold 
     uppercase
     flex
@@ -19,8 +18,9 @@ function Button() {
     mt-[10px]
 
     sm:w-[150px] text-[13px]
-    md:px-[30px]
-    ' > Subscribe</div>
+    md:px-[30px][@media(max-width:355px)]:w-[70px]
+     [@media(max-width:355px)]:h-[30px] [@media(max-width:355px)]:text-[9px] [@media(max-width:355px)]:mt-[10px]
+    ' > Subscribe</button>
   )
 }
 

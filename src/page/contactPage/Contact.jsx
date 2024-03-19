@@ -6,6 +6,8 @@ import Navbar from '../../components/Navbar/Navbar';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import {FaTimes} from 'react-icons/fa'
+import backgroundImage from '../../assets/images/zoom4.avif';
+import { FaStar } from 'react-icons/fa';
 
 
 
@@ -30,6 +32,53 @@ function Contact() {
     return () => clearTimeout(textTimeout);
   }, []);
   
+  const [textIndex, setTextIndex] = useState(0);
+  const texts = [
+    <div>
+        <ul className='flex col justify-center'>
+            <FaStar className='text-[#FFC107]'></FaStar>
+            <FaStar className='text-[#FFC107]'></FaStar>
+            <FaStar className='text-[#FFC107]'></FaStar>
+            <FaStar className='text-[#FFC107]'></FaStar>
+            <FaStar className='text-[#FFC107]'></FaStar>         
+      </ul>
+      <h1 className='text-[1rem] font-serif  sm:text-[1.2rem] font-serif pt-[20px]'>RayApartment is a game-changer in the world of hotel booking <br /> apps! Its seamless and intuitive platform made finding and booking my ideal accommodations a breeze. The comprehensive  <br />features and prioritization of user comfort ensured an effortless and satisfying experience. RayApartment is my go-to <br />choice for stress-free travel planning!</h1>
+      <h1 className="text-[18px] font-bold sm:text-[20px] ">Anonymous</h1>
+    </div>,
+    <div>
+        <ul className='flex col justify-center'>
+            <FaStar className='text-[#FFC107]'></FaStar>
+            <FaStar className='text-[#FFC107]'></FaStar>
+            <FaStar className='text-[#FFC107]'></FaStar>
+            <FaStar className='text-[#FFC107]'></FaStar>
+            <FaStar className='text-[#FFC107]'></FaStar>         
+      </ul>
+     <h1 className='text-[1rem] font-serif  sm:text-[1.2rem] font-serif pt-[20px]'>Booking my stay with Ray Apartment was a breeze! From finding  <br /> the perfect accommodation to securing my reservation, their app made the entire process seamless. The attention to detail and <br /> personalized service exceeded my expectations. I highly recommend Ray Apartment to anyone looking for a hassle-free <br /> and memorable travel experience!</h1>
+    </div>,
+    <div>
+       <ul className='flex col justify-center'>
+            <FaStar className='text-[#FFC107]'></FaStar>
+            <FaStar className='text-[#FFC107]'></FaStar>
+            <FaStar className='text-[#FFC107]'></FaStar>
+            <FaStar className='text-[#FFC107]'></FaStar>
+            <FaStar className='text-[#FFC107]'></FaStar>         
+      </ul>
+     <h1 className='text-[1rem] font-serif  sm:text-[1.2rem] font-serif pt-[20px]'>Ray Apartment's hotel booking app is my go-to choice for all my travel 
+     <br /> needs. The app's user-friendly interface and extensive range of options make it easy to find the perfect accommodation for any trip. 
+     <br /> With seamless booking and excellent customer support, Ray Apartment ensures that every stay is a memorable experience. 
+     <br /> I wouldn't trust my travel plans to anyone else!</h1>
+    </div>
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [texts.length]);
+
+
   return (
     <div>
      
@@ -121,6 +170,21 @@ function Contact() {
         <span id="text1">Your Initial Text</span>
         <span id="text2" className="hidden">Your New Text</span>
       </div>
+      <div
+      style={{
+        backgroundImage: `url(${'https://images.unsplash.com/photo-1570737209810-87a8e7245f88?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        height: '100vh',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        color: 'white',
+        textAlign: 'center',
+      }}
+    >
+      {texts[textIndex]}
+    </div>
             <Footers/>
           
     </div>

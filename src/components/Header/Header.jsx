@@ -39,7 +39,7 @@ function Header() {
     ' >Raysapartment</p>
 
 </Link>
-<Navigation className="  text-[#000] "  pages={pages} />
+<Navigation className=" text-[#000] "  pages={pages} />
 
     </div>
 

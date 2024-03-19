@@ -9,4 +9,9 @@
 .myInput ::placeholder{
     color: white;
 }
+@media (max-width:450px) {
+    .myInput input{
+    width:15rem;
+    }
+}
 

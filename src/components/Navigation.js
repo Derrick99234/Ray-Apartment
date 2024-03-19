@@ -13,8 +13,7 @@ const Navigation = ({ pages }) => {
              font-medium
              text-[17px]
              text-[#1876f2]
-             
-             "  to={page.path}>{page.name}       </Link>
+          " to={page.path}>{page.name}</Link>
           </li>
         ))}
       </ul>

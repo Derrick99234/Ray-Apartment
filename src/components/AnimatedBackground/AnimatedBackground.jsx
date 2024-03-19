@@ -4,10 +4,9 @@ const AnimatedBackground = () => {
   const [backgroundIndex, setBackgroundIndex] = useState(0);
 
   const images = [
-    'https://libertatravel.hr/wp-content/uploads/2023/05/Grape-harvest.jpg',
-    'https://images.unsplash.com/photo-1685814830158-e4b368134de0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE5fHx8ZW58MHx8fHx8',
-    'https://images.unsplash.com/photo-1615471618985-97108e2ba478?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDIwfHx8ZW58MHx8fHx8',
-    'https://images.unsplash.com/photo-1704973836219-4c9414787505?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8Nnw0ZjdGd01HLWZrMHx8ZW58MHx8fHx8'
+    'https://plus.unsplash.com/premium_photo-1661962495669-d72424626bdc?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    'https://images.unsplash.com/photo-1562438668-bcf0ca6578f0?q=80&w=2060&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    'https://images.unsplash.com/photo-1598928506311-c55ded91a20c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     
     // Add more image URLs as needed
   ];
@@ -23,13 +22,13 @@ const AnimatedBackground = () => {
 
   return (
     <div
-      className="relative h-[85vh] flex items-center justify-center bg-cover bg-center transition-all duration-1000"
+      className="relative h-[87vh] flex items-center justify-center bg-cover bg-center transition-all duration-1000"
       style={{ backgroundImage: `url('${images[backgroundIndex]}')` }}
     >
       <div className="absolute inset-0 bg-black opacity-50"></div>
       <div className="text-white text-center z-10">
-        <p className="mt-2">THE LATEST NEWS AND BLOG</p>
-        <h1 className="text-[5rem] font-bold">About Us</h1>
+        <p className="mt-20">THE LATEST NEWS AND BLOG</p>
+        <h1 className="text-[4rem] font-bold">About Us</h1>
       </div>
     </div>
   );
