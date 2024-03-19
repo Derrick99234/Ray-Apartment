@@ -1,0 +1,12 @@
+.myInput input{
+        border: 2px solid #998364;
+        background-color: transparent;
+        width: 20rem;
+        padding: 15px;
+        margin: 20px 0 0 0;
+        color: white;
+}
+.myInput ::placeholder{
+    color: white;
+}
+
