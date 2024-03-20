@@ -13,7 +13,9 @@ const Navbar = () => {
     <nav className="bg-white text-[black] fixed w-full z-50">
       <div className="flex items-center font-medium justify-between">
         <div className="z-50 p-5 md:w-auto w-full flex justify-between">
+         <Link to="/">
           <img src={Logo} alt="logo" className=" w-[40vw] md:cursor-pointer h-[70px] xl:ml-[10rem] md:w-[22vw] md:ml-[1rem] " />
+          </Link>
           <div className="text-3xl md:hidden" onClick={() => setOpen(!open)}>
             <FaBars name={`${open ? "close" : "menu"}`} className="mt-[17px]" ></FaBars>
           </div>
@@ -52,7 +54,10 @@ const Navbar = () => {
             </Link>
           </li>
           
-          <NavLinks />
+          {/* <NavLinks /> */}
+          <Link to="/aboutus" className=" py-7 px-3 inline-block">
+              About Us
+            </Link>
           <li>
             <Link to="/accommodation" className="py-7 px-3 inline-block">
               Accommodation
